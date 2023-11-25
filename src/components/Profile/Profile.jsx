@@ -1,8 +1,9 @@
-import './profile.css';
-import userData from '../../user.json';
+import './profile.module.css';
 
-const { username, tag, location, avatar, stats } = userData;
- export const Profile = () =>(<div className="profile">
+
+
+const Profile = ({ username, tag, location, avatar, stats }) => (
+  <div className="profile">
   <div className="description">
     <img
       src={avatar}
@@ -29,3 +30,4 @@ const { username, tag, location, avatar, stats } = userData;
     </li>
   </ul>
 </div>);
+export default Profile

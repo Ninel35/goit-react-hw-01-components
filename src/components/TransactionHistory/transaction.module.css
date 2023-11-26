@@ -1,0 +1,9 @@
+.title {
+  background-color: black;
+  color: white;
+}
+
+.transaction_history,
+.item_td {
+  border: 1px solid #333;
+}

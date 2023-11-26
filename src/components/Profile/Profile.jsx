@@ -1,13 +1,14 @@
-import './profile.module.css';
+import css from './profile.module.css';
 
 
 
 const Profile = ({ username, tag, location, avatar, stats }) => (
-  <div className="profile">
-  <div className="description">
+  <div className={css.profile}>
+  <div className={css.description}>
     <img
       src={avatar}
-      alt="User avatar"
+        alt="User avatar"
+        height="100"
       className="avatar"
     />
     <p className="name">{username}</p>
@@ -15,19 +16,20 @@ const Profile = ({ username, tag, location, avatar, stats }) => (
     <p className="location">{location}</p>
   </div>
 
-  <ul className="stats">
-    <li>
+    <ul className={css.stats}>
+    <li className={css.stat}>
       <span className="label">Followers</span>
       <span className="quantity">{stats.followers }</span>
     </li>
-    <li>
+    <li className={css.stat}>
       <span className="label">Views</span>
       <span className="quantity">{stats.views }</span>
     </li>
-    <li>
+    <li className={css.stat}>
       <span className="label">Likes</span>
       <span className="quantity">{stats.likes }</span>
     </li>
   </ul>
-</div>);
+  </div>
+);
 export default Profile
